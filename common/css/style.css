@@ -1,0 +1,12 @@
+.parent {
+  background-color: #383E45;
+  font-size: 200px;
+}
+.parent .child {
+  font-size: large;
+  color: #0bd;
+  overflow: hidden;
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */

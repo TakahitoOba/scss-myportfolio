@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+// 初期設定
+@use "setting/config";
+
+
+
+
+
+
+
+
+
+.parent {
+    background-color: config.$fontColor;
+    font-size: 200px;
+    .child {
+        font-size: large;
+        color: #0bd;
+        overflow: hidden;
+        position: relative;
+    }
+}
+
