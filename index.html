@@ -9,7 +9,7 @@
     <!-- 電話番号の自動リンクの無効 -->
     <meta name="format-detection" content="telephone=no">
     <!-- リセットCSS -->
-    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <!-- オリジナルCSS -->
     <link rel="stylesheet" type="text/css" href="common/css/style.css">
     <!-- Favicon -->
@@ -26,15 +26,37 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <h1 class="header__logo"><img src="common/img/logo.svg"></h1>
+            <h1 class="header__logo"><img class="header__logo-img" src="common/img/logo.svg" alt="Profile"></h1>
             <nav class="header__nav" role="navigation">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="#About">About</a></li>
-                    <li class="header__nav-item"><a href="#Bicycle">Bicycle</a></li>
+                    <li class="header__nav-item"><a class="header__nav-item--link" href="#About">About</a></li>
+                    <li class="header__nav-item"><a class="header__nav-item--link" href="#Bicycle">Bicycle</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <main>
+        <div class="mv">
+            <img class="mv__img" src="common/img/mainvisual.jpg" alt="Profile Bicycle">
+        </div>
+
+        <section class="content__wrap">
+            <div class="section__ttl-wrap">
+                <h2 class="section__ttl">About</h2>
+            </div>
+            <div class="about">
+                <div class="about__img">
+                    <img src="common/img/about.jpg" alt="KANEMURA MIYAICHI">
+                </div>
+
+                <div class="about__text">
+                    <h3 class="about__text-ttl">KANEMURA MIYAICHI</h3>
+                    <p class="about__text-paragraph">テキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

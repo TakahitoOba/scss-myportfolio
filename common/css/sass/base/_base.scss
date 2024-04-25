@@ -1,2 +1,23 @@
-@charset "UTF-8";
+// 初期設定
+@use "../setting/config";
 
+// コンテンツ幅
+@use "../mixin/content-size";
+
+body {
+    font-size: 14px;
+    font-weight: normal;
+    font-family:'メイリオ', 'Meiryo', sans-serif;
+    background-color: config.$baseColor;
+}
+a {
+    text-decoration: none;
+}
+input, textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+.content__wrap {
+    @include content-size.content-size();
+}

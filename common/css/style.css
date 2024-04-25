@@ -1,12 +1,67 @@
-.parent {
-  background-color: #383E45;
-  font-size: 200px;
+@charset "UTF-8";
+body {
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "メイリオ", "Meiryo", sans-serif;
+  background-color: #FFFFFF;
 }
-.parent .child {
-  font-size: large;
-  color: #0bd;
-  overflow: hidden;
-  position: relative;
+
+a {
+  text-decoration: none;
+}
+
+input, textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+.content__wrap {
+  width: 100%;
+  max-width: 960px;
+  padding-block: 10px;
+  padding-inline: 4%;
+}
+
+.header {
+  width: 100%;
+  max-width: 960px;
+  padding-block: 10px;
+  padding-inline: 4%;
+  margin-inline: auto;
+}
+.header .header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__inner .header__logo {
+  height: 40px;
+}
+.header .header__inner .header__logo .header__logo-img {
+  width: auto;
+  height: 100%;
+}
+.header .header__inner .header__nav {
+  margin-right: 2px;
+}
+.header .header__inner .header__nav .header__nav-list {
+  display: flex;
+  gap: 0 33px;
+  list-style: none;
+}
+.header .header__inner .header__nav .header__nav-list .header__nav-item--link {
+  color: #383E45;
+}
+
+.mv {
+  width: 100%;
+  height: 600px;
+}
+.mv .mv__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
