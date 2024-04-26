@@ -1,11 +1,10 @@
 // ブレイクポイント
-$breakPointList: 767px, 768px;
-
-// メディアクエリ
-$mq: (
-    'sp': 'screen and (max-width: #{nth($breakPointList, 1)}',
-    'pc': 'print,screen and (min-width: #{nth($breakPointList, 2)})'
-)!default;
+$breakpoints: (
+    'sm': 'screen and (max-width: 576px)',
+    'md': 'screen and (max-width: 768px)',
+    'lg': 'screen and (max-width: 992px)',
+    'xl': 'screen and (max-width: 1200px)',
+) !default;
 
 // 画像格納ディレクトリ
 $imgDir: '../img/';
@@ -16,3 +15,7 @@ $minPcContentWidth: 960px;
 // サイトで使用するカラー
 $fontColor: #383E45;
 $baseColor: #FFFFFF;
+
+// font-size
+$secTtlSize: 32px;
+$secSubTtlSize: 16px;

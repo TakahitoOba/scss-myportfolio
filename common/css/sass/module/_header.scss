@@ -1,12 +1,11 @@
 // 初期設定
 @use "../setting/config";
 
+// コンテンツ幅
+@use "../mixin/content-size";
+
 .header {
-    width: 100%;
-    max-width: config.$minPcContentWidth;
-    padding-block: 10px;
-    padding-inline: 4%;
-    margin-inline: auto;
+    @include content-size.content-size();
     .header__inner {
         display: flex;
         justify-content: space-between;

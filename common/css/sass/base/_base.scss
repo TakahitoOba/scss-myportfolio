@@ -5,10 +5,11 @@
 @use "../mixin/content-size";
 
 body {
-    font-size: 14px;
+    font-size: 14.4px;
     font-weight: normal;
     font-family:'メイリオ', 'Meiryo', sans-serif;
     background-color: config.$baseColor;
+    margin: 0;
 }
 a {
     text-decoration: none;

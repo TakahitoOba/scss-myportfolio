@@ -1,0 +1,9 @@
+// 初期設定
+@use "../setting/config";
+
+// メディアクエリ用
+@mixin responsive($breakpoint) {
+    @media #{map-get(config.$breakpoints, $breakpoint)} {
+        @content;
+    }
+}

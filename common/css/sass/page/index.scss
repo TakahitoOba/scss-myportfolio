@@ -1,6 +1,15 @@
 // 初期設定
 @use "../setting/config";
 
+// セクションタイトル
+@use "../mixin/sec-ttl";
+
+// flex
+@use "../mixin/flex-center";
+
+// レスポンシブ
+@use "../mixin/responsive";
+
 .mv {
     width: 100%;
     height: 600px;
@@ -10,5 +19,94 @@
         object-fit: cover;
     }
 }
-
+.about {
+    margin-top: 80px;
+    .section__ttl-wrap {
+        @include sec-ttl.sec-ttl();
+        margin-bottom: 66px;
+        @include responsive.responsive(md) {
+            margin-bottom: 60px;
+        }
+    }
+    .about-content {
+        padding-inline: 17%;
+        @include flex-center.flex-center(center);
+        @include responsive.responsive(md) {
+            flex-direction: column;
+            padding-inline: 0;
+        }
+        .about-content__img-wrap {
+            width: 100px;
+            @include responsive.responsive(md) {
+                margin-bottom: 10px;
+            }
+            .about-content__img {
+                width: 100%;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+            }
+        }
+        .about-content__text {
+            margin-left: 30px;
+            @include responsive.responsive(md) {
+                width: 100%;
+                margin-left: 0;
+            }
+            .about-content__text-ttl {
+                font-size: config.$secSubTtlSize;
+                margin-bottom: 10px;
+            }
+            .about-content__text-paragraph {
+                line-height: 1.8;
+            }
+        }
+    }
+}
+.bicycle {
+    margin-top: 96px;
+    margin-bottom: 110px;
+    @include responsive.responsive(md) {
+        margin-top: 100px;
+        margin-bottom: 139px;
+    }
+    .section__ttl-wrap {
+        @include sec-ttl.sec-ttl();
+        margin-bottom: 60px;
+    }
+    .Bicycle-content {
+        @include flex-center.flex-center(space-between);
+        width: 100%;
+        @include responsive.responsive(md) {
+            flex-direction: column;
+        }
+        
+        .Bicycle-content__box {
+            width: calc((100% - 32px) / 3);
+            text-align: center;
+            @include responsive.responsive(md) {
+                 width: 100%;
+                 margin-bottom: 30px;
+            }
+            &:last-of-type {
+                @include responsive.responsive(md) {
+                    margin-bottom: 0;
+               }
+            }
+            .Bicycle-content__img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+            .Bicycle-content__ttl {
+                font-size: config.$secSubTtlSize;
+                font-weight: bold;
+                margin-bottom: 10px;
+                line-height: 1.2;
+            }
+            .Bicycle-content__paragraph{
+                line-height: 1.2;
+            }
+        }
+    }
+}
 
